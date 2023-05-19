@@ -13,9 +13,12 @@ h1 {
 	color: #000000;
 }
 
-#footer {
-	text-align: center;
-	font-size: 10px;
-	color: #000000;
-	position: fixed;
+div#footer {
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	color:#CCC;
+	background:#333;
+	padding:8px;
 }
