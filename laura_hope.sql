@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.15, for macos10.14 (x86_64)
 --
--- Host: localhost    Database: animal_shelter
+-- Host: localhost    Database: laura_hope
 -- ------------------------------------------------------
 -- Server version	8.0.15
 
@@ -16,36 +16,36 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `animals`
+-- Table structure for table `clients`
 --
 
-DROP TABLE IF EXISTS `animals`;
+DROP TABLE IF EXISTS `clients`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `animals` (
-  `AnimalId` int(11) NOT NULL AUTO_INCREMENT,
-  `Name` varchar(255) DEFAULT NULL,
-  `Description` varchar(255) DEFAULT NULL,
-  `CategoryId` int(11) DEFAULT NULL,
-  `Date_Of_Admittance` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`AnimalId`),
-  KEY `CategoryId_idx` (`CategoryId`),
-  CONSTRAINT `CategoryId` FOREIGN KEY (`CategoryId`) REFERENCES `categories` (`CategoryId`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `clients` (
+  `ClientId` int(11) NOT NULL AUTO_INCREMENT,
+  `Last_Name` varchar(255) DEFAULT NULL,
+  `DOB` datetime DEFAULT NULL,
+  `StylistId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ClientId`),
+  KEY `StylistId_idx` (`StylistId`),
+  CONSTRAINT `StylistId` FOREIGN KEY (`StylistId`) REFERENCES `stylists` (`StylistId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `categories`
+-- Table structure for table `stylists`
 --
 
-DROP TABLE IF EXISTS `categories`;
+DROP TABLE IF EXISTS `stylists`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `categories` (
-  `CategoryId` int(11) NOT NULL AUTO_INCREMENT,
-  `Species` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`CategoryId`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `stylists` (
+  `StylistId` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(255) DEFAULT NULL,
+  `Date_Hired` datetime DEFAULT NULL,
+  PRIMARY KEY (`StylistId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -57,6 +57,4 @@ CREATE TABLE `categories` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-16 14:57:37
-
--- SELECT Description FROM animals ORDER BY ASC
+-- Dump completed on 2023-05-19 10:07:55
