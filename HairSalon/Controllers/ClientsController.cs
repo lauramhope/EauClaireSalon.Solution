@@ -7,77 +7,77 @@ using System.Linq;
 
 namespace HairSalon.Controllers
 {
-  public class ClassNamesController : Controller
+  public class ClientsController : Controller
   {
     private readonly HairSalonContext _db;
 
-    public ClassNamesController(HairSalonContext db)
+    public ClientsController(HairSalonContext db)
     {
       _db = db;
     }
  
-//     public ActionResult Index()
-//     {
-//       List<Animal> model = _db.Animals
-//                             .Include(animal => animal.Category)
-//                             .ToList();
-//       return View(model);
-//     }
+    public ActionResult Index()
+    {
+      List<Client> model = _db.Clients
+                            .Include(client => client.Stylist)
+                            .ToList();
+      return View(model);
+    }
 
-//     public ActionResult Create()
-//     {
-//       ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Species");
-//       return View();
-//     }
+    public ActionResult Create()
+    {
+      ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Name");
+      return View();
+    }
 
-//     [HttpPost]
-//     public ActionResult Create(Animal animal)
-//     {
-//       if (animal.CategoryId == 0)
-//       {
-//         return RedirectToAction("Create");
-//       }
-//       _db.Animals.Add(animal);
-//       _db.SaveChanges();
-//       return RedirectToAction("Index");
-//     }
+    [HttpPost]
+    public ActionResult Create(Client client)
+    {
+      if (client.StylistId == 0)
+      {
+        return RedirectToAction("Create");
+      }
+      _db.Clients.Add(client);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
 
-//     public ActionResult Details(int id)
-//     {
-//       Animal thisAnimal = _db.Animals
-//                           .Include(animal => animal.Category)
-//                           .FirstOrDefault(animal => animal.AnimalId == id);
-//       return View(thisAnimal);
-//     }
+    public ActionResult Details(int id)
+    {
+      Client thisClient = _db.Clients
+                          .Include(client => client.Stylist)
+                          .FirstOrDefault(client => client.ClientId == id);
+      return View(thisClient);
+    }
 
-//     public ActionResult Edit(int id)
-//     {
-//       Animal thisAnimal = _db.Animals.FirstOrDefault(animal => animal.AnimalId == id);
-//       ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Species");
-//       return View(thisAnimal);
-//     }
+    public ActionResult Edit(int id)
+    {
+      Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
+      ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Name");
+      return View(thisClient);
+    }
 
-//     [HttpPost]
-//     public ActionResult Edit(Animal animal)
-//     {
-//       _db.Animals.Update(animal);
-//       _db.SaveChanges();
-//       return RedirectToAction("Index");
-//     }
+    [HttpPost]
+    public ActionResult Edit(Client client)
+    {
+      _db.Clients.Update(client);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
 
-//     public ActionResult Delete(int id)
-//     {
-//       Animal thisAnimal = _db.Animals.FirstOrDefault(animal => animal.AnimalId == id);
-//       return View(thisAnimal);
-//     }
+    public ActionResult Delete(int id)
+    {
+      Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
+      return View(thisClient);
+    }
 
-//     [HttpPost, ActionName("Delete")]
-//     public ActionResult DeleteConfirmed(int id)
-//     {
-//       Animal thisAnimal = _db.Animals.FirstOrDefault(animal => animal.AnimalId == id);
-//       _db.Animals.Remove(thisAnimal);
-//       _db.SaveChanges();
-//       return RedirectToAction("Index");
-//     }
+    [HttpPost, ActionName("Delete")]
+    public ActionResult DeleteConfirmed(int id)
+    {
+      Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
+      _db.Clients.Remove(thisClient);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
