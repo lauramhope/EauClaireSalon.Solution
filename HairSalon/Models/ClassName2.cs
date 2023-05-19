@@ -1,4 +1,4 @@
-namespace ProjectName.Models
+namespace HairSalon.Models
 {
   public class ClassName2
   {

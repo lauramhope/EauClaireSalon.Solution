@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using AnimalShelter.Models;
+using HairSalon.Models;
 
-namespace AnimalShelter
+namespace HairSalon
 {
   class Program
   {
@@ -14,7 +14,7 @@ namespace AnimalShelter
 
       builder.Services.AddControllersWithViews();
 
-      builder.Services.AddDbContext<AnimalShelterContext>(
+      builder.Services.AddDbContext<HairSalonContext>(
                         dbContextOptions => dbContextOptions
                           .UseMySql(
                             builder.Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(builder.Configuration["ConnectionStrings:DefaultConnection"]

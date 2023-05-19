@@ -1,6 +1,6 @@
-# _Project-Name.Solution_
+# _EauClaireSalon.Solution_
 
-#### _brief description_
+#### _MVC web application to manage stylists and clients_
 
 #### By **Laura Hope**
 
@@ -8,20 +8,26 @@
 
 * _C#_
 * _.NET v6.0_
-* _MSTest.TestAdapter v2.2.10_
-* _MSTest.TestFramework v2.2.10_
+* _MySQLWorkbench_
+* _MS EntityFrameworkCore v6.0.0_
+* _Pomelo EntityFrameworkCore MySQL v6.0.0_
 * _Git_
 * _VSCode_
 
 ## Description
 
-_Detailed description of application_
+_This application showcases using EFCore and MySQL to create and link database schemas to the project models. Application uses HTML helper methods, LINQ commands, and navigation properties to allow the salon owner to add stylists and link clients to each stylist using one-to-many relationships._
 
 ## Setup/Installation Requirements
 
-* _Clone ProjectName.Solution“ from the repository to your desktop_
-* _Navigate to "ProjectName.Solution" directory via your local terminal command line_
-* _Navigate to the production directory "PierresBakery"_
+* _Clone "EauClaireSalon".Solution“ from the repository to your desktop_
+* _Navigate to "EauClaireSalon.Solution" directory via your local terminal command line_
+* _Navigate to the production directory "HairSalon"_
+
+
+*******EDIT REST OF README INSTRUCTIONS********
+
+
 * _Download ***.NET 6 SDK*** by following the directions from this link [Here](https://dotnet.microsoft.com/en-us/download/dotnet/6.0), this will also allow you to use **C#**_
 * _**Open the file**. This will launch an installer which will walk you through installation steps. ***Use default settings***._
 * _Confirm the installation is successful by opening your terminal and running the command ***dotnet --version***._
@@ -32,13 +38,11 @@ _Detailed description of application_
 * _Then type ***dotnet build*** in your terminal to make sure everything is up to date and there are no errors_
 * _Then launch the webpage by typing ***dotnet watch run --launch-profile "production"*** in the teminal_
 * _For issuing and trusting a security certificate, type ***dotnet dev-certs https --trust*** in the terminal and restart your browser_
-* _If you need to install MSTest, type ***dotnet tool install -g dotnet-suggest*** in the terminal_
-* _If you would like to run the tests, type ***dotnet restore*** in the terminal to restore the dependencies that are listed in the .csproj file_
-* _Run the tests by moving into the [PROJECT NAME GOES HERE].Tests folder and typing ***dotnet test*** in the terminal to run tests_
+
 
 ## Known Bugs
 
-* _No known bugs as of 5/5/23_
+* _No known bugs as of 5/19/23_
 
 ## License
 
