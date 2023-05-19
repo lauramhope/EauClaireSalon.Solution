@@ -11,4 +11,4 @@ namespace HairSalon.Models
     public string MonthYearHired { get; set; }
     public List<Client> Clients { get; set; }
   }
-} 
+}
