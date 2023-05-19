@@ -22,6 +22,16 @@ _This application showcases using EFCore and MySQL to create and link database s
 
 * _Clone "EauClaireSalon".Solution“ from the repository to your desktop_
 * _Navigate to "EauClaireSalon.Solution" directory via your local terminal command line_
+* _Create a file ".gitignore" in the "EauClaireSalon.Solution" directory_
+```
+$ touch .gitignore
+```
+* _Copy/paste the following in the .gitignore file:_
+```
+obj
+bin
+appsettings.json
+```
 * _Navigate to the production directory "HairSalon"_
 * _Create a file within the "HairSalon" folder titled "appsettings.json"_
 ```
@@ -37,9 +47,13 @@ $ touch appsettings.json
 ```
 * _Replace [USER-ID] and [USER-PW] with your own ID and password (excluding the brackets)_
 * _Navigate to the command line within the "HairSalon" folder and execute command "dotnet build"_
+* _Add the EF Core packages by typing the following into the command line:_
+```
+$ dotnet add package Microsoft.EntityFrameworkCore -v 6.0.0
+$ dotnet add package Pomelo.EntityFrameworkCore.MySql -v 6.0.0
+```
 * _Return to the command line and type "dotnet watch run" - this should automatically open a browser to the LocalHost:5000 or LocalHost:5001
 * _This is where you can interact with the application via entering stylists, clientele, etc._
-
 
 ## Known Bugs
 
