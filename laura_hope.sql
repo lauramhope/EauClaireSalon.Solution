@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `clients`;
 CREATE TABLE `clients` (
   `ClientId` int(11) NOT NULL AUTO_INCREMENT,
   `last_name` varchar(255) DEFAULT NULL,
-  `birthday` datetime DEFAULT NULL,
+  `phone` varchar(255) DEFAULT NULL,
   `StylistId` int(11) DEFAULT NULL,
   `first_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ClientId`),
@@ -44,7 +44,7 @@ DROP TABLE IF EXISTS `stylists`;
 CREATE TABLE `stylists` (
   `StylistId` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
-  `date_hired` datetime DEFAULT NULL,
+  `month_year_hired` varchar(255) DEFAULT NULL,
   `specialty` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`StylistId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -59,4 +59,4 @@ CREATE TABLE `stylists` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-19 11:03:10
+-- Dump completed on 2023-05-19 11:41:14
