@@ -13,16 +13,16 @@
 {
 
   @Html.LabelFor(model => model.FirstName)
-  @Html.TextBoxFor(model => model.FirstName)
+  @Html.TextBoxFor(model => model.FirstName, new { required = "required" })
 
   @Html.LabelFor(model => model.LastName)
-  @Html.TextBoxFor(model => model.LastName)
+  @Html.TextBoxFor(model => model.LastName, new { required = "required" })
 
   @Html.LabelFor(model => model.Phone)
-  @Html.TextBoxFor(model => model.Phone)
+  @Html.TextBoxFor(model => model.Phone, new { required = "required" })
 
   @Html.LabelFor(model => model.Stylist)
-  @Html.DropDownList("StylistId")
+  @Html.DropDownList("StylistId") 
 
   <input type="submit" value="Add new client"/>
 }
