@@ -2,5 +2,20 @@ body {
 	background-image: url("./salon.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
+	background-position: auto;
+	background-attachment: fixed;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+	text-align: left;
+	font-size: 50px;
+	color: #000000;
+}
+
+#footer {
+	text-align: center;
+	font-size: 10px;
+	color: #000000;
+	position: fixed;
 }

@@ -4,13 +4,15 @@
 
 @model HairSalon.Models.Client
 
-<h2>Client Details:</h2>
-<hr />
-<h3>@Html.DisplayNameFor(model => model.LastName): @Html.DisplayFor(model => model.LastName)<h3>
-<h3>@Html.DisplayNameFor(model => model.Stylist): @Html.DisplayFor(model => model.Stylist.Name)<h3>
-<h3>@Html.DisplayNameFor(model => model.FirstName): @Html.DisplayFor(model => model.FirstName)</h3>
-<h3>@Html.DisplayNameFor(model => model.Phone): @Html.DisplayFor(model => model.Phone)</h3>
+<div class="card" style="width: 18rem;">
+  <h3><u>Client Details:</u></h3>
+  <h5>@Html.DisplayNameFor(model => model.LastName): @Html.DisplayFor(model => model.LastName)</h5>
+  <h5>@Html.DisplayNameFor(model => model.FirstName): @Html.DisplayFor(model => model.FirstName)</h5>
+  <h5>@Html.DisplayNameFor(model => model.Phone): @Html.DisplayFor(model => model.Phone)</h5>
+  <h5>@Html.DisplayNameFor(model => model.Stylist): @Html.DisplayFor(model => model.Stylist.Name)</h5> 
+</div>
 
+<br>
 <p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
 <p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</p>
 <p>@Html.ActionLink("Back to list", "Index")</p>
