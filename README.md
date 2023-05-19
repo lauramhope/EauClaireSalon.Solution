@@ -23,21 +23,22 @@ _This application showcases using EFCore and MySQL to create and link database s
 * _Clone "EauClaireSalon".Solution“ from the repository to your desktop_
 * _Navigate to "EauClaireSalon.Solution" directory via your local terminal command line_
 * _Navigate to the production directory "HairSalon"_
-
-
-*******EDIT REST OF README INSTRUCTIONS********
-
-
-* _Download ***.NET 6 SDK*** by following the directions from this link [Here](https://dotnet.microsoft.com/en-us/download/dotnet/6.0), this will also allow you to use **C#**_
-* _**Open the file**. This will launch an installer which will walk you through installation steps. ***Use default settings***._
-* _Confirm the installation is successful by opening your terminal and running the command ***dotnet --version***._
+* _Create a file within the "HairSalon" folder titled "appsettings.json"_
 ```
-6.0.402
+$ touch appsettings.json
 ```
-* _Navigate to the [PROJECT NAME GOES HERE] folder in your terminal_
-* _Then type ***dotnet build*** in your terminal to make sure everything is up to date and there are no errors_
-* _Then launch the webpage by typing ***dotnet watch run --launch-profile "production"*** in the teminal_
-* _For issuing and trusting a security certificate, type ***dotnet dev-certs https --trust*** in the terminal and restart your browser_
+* _Navigate to the appsettings.json file and copy/paste the following text within the file:_
+```
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Port=3306;database=laura_hope;uid=[USER-ID];pwd=[USER-PW];"
+  }
+}
+```
+* _Replace [USER-ID] and [USER-PW] with your own ID and password (excluding the brackets)_
+* _Navigate to the command line within the "HairSalon" folder and execute command "dotnet build"_
+* _Return to the command line and type "dotnet watch run" - this should automatically open a browser to the LocalHost:5000 or LocalHost:5001
+* _This is where you can interact with the application via entering stylists, clientele, etc._
 
 
 ## Known Bugs
