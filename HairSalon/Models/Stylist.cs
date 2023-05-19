@@ -2,10 +2,13 @@ using System.Collections.Generic;
 
 namespace HairSalon.Models
 {
-  public class ClassName1
+  public class Stylist
   {
-    // public int CategoryId { get; set; }
-    // public string Species { get; set; }
-    // public List<Animal> Animals { get; set; }
+    public int StylistId { get; set; }
+    public string Name { get; set; }
+    public string Specialty { get; set; }
+
+    public int DateHired { get; set; }
+    public List<Client> Clients { get; set; }
   }
 }

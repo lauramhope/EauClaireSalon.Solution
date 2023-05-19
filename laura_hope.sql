@@ -24,8 +24,8 @@ DROP TABLE IF EXISTS `clients`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `clients` (
   `ClientId` int(11) NOT NULL AUTO_INCREMENT,
-  `Last_Name` varchar(255) DEFAULT NULL,
-  `DOB` datetime DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `birthday` datetime DEFAULT NULL,
   `StylistId` int(11) DEFAULT NULL,
   PRIMARY KEY (`ClientId`),
   KEY `StylistId_idx` (`StylistId`),
@@ -42,8 +42,9 @@ DROP TABLE IF EXISTS `stylists`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `stylists` (
   `StylistId` int(11) NOT NULL AUTO_INCREMENT,
-  `Name` varchar(255) DEFAULT NULL,
-  `Date_Hired` datetime DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `date_hired` datetime DEFAULT NULL,
+  `specialty` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`StylistId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -57,4 +58,4 @@ CREATE TABLE `stylists` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-19 10:07:55
+-- Dump completed on 2023-05-19 10:49:01

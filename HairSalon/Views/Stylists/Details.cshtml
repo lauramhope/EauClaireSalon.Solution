@@ -5,25 +5,25 @@
 @model HairSalon.Models.ClassName1
 @using HairSalon.Models
 
-<h2>ClassName1 Details</h2>
+<h2>Stylist Details</h2>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.PropertyName): @Html.DisplayFor(model => model.PropertyName)<h3>
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3>
 
-@if (@Model.ClassNames2.Count == 0)
+@if (@Model.Clients.Count == 0)
 {
-  <h3>No ClassNames2 have been added to this ClassName1 yet!</h3>
+  <h3>No clients have been added to this stylist yet!</h3>
 } 
 else
 {
-  <h3>ClassNames2:</h3>
+  <h3>Clients:</h3>
   <ul>
-    @foreach (ClassName2 className2 in Model.ClassNames2)
+    @foreach (Client client in Model.Clients)
     {
-      <li>@Html.ActionLink($"{className2.PropertyName}", "Details", "ClassNames2", new { id = className2.ClassName2Id })</li>
+      <li>@Html.ActionLink($"{client.LastName}", "Details", "Clients", new { id = client.ClientId })</li>
     }
   </ul>
 }
 
-<p>@Html.ActionLink("Edit ClassName1", "Edit", new { id = Model.ClassName1Id })</p>
-<p>@Html.ActionLink("Delete ClassName2", "Delete", new { id = Model.ClassName1Id })</p>
+<p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</p>
+<p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.StylistId })</p>
 <p>@Html.ActionLink("Back to list", "Index")</p>

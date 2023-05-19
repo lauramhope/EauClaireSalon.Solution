@@ -1,14 +1,13 @@
 namespace HairSalon.Models
 {
-  public class ClassName2
+  public class Client
   {
-    // public int AnimalId { get; set; }
-    // public string Name { get; set; }
-    // public string Description { get; set; }
-    // public int CategoryId { get; set; }
-    // public Category Category { get; set; }
+    public int ClientId { get; set; }
+    public string LastName { get; set; }
+    public int Birthday { get; set; }
 
-    // public string Date_Of_Admittance { get; set; }
+    public int StylistId { get; set; }
+    public Stylist Stylist { get; set; }
 
   }
 }
