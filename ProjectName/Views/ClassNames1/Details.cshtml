@@ -1,0 +1,29 @@
+@{
+  Layout = "_Layout";
+}
+
+@model ProjectName.Models.ClassName1
+@using ProjectName.Models
+
+<h2>ClassName1 Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.PropertyName): @Html.DisplayFor(model => model.PropertyName)<h3>
+
+@if (@Model.ClassNames2.Count == 0)
+{
+  <h3>No ClassNames2 have been added to this ClassName1 yet!</h3>
+} 
+else
+{
+  <h3>ClassNames2:</h3>
+  <ul>
+    @foreach (ClassName2 className2 in Model.ClassNames2)
+    {
+      <li>@Html.ActionLink($"{className2.PropertyName}", "Details", "ClassNames2", new { id = className2.ClassName2Id })</li>
+    }
+  </ul>
+}
+
+<p>@Html.ActionLink("Edit ClassName1", "Edit", new { id = Model.ClassName1Id })</p>
+<p>@Html.ActionLink("Delete ClassName2", "Delete", new { id = Model.ClassName1Id })</p>
+<p>@Html.ActionLink("Back to list", "Index")</p>

@@ -1,0 +1,30 @@
+@{
+  Layout = "_Layout";
+}
+
+@model ProjectName.Models.ClassName2
+
+<h2>Edit</h2>
+
+<h4>Edit this className2: @Html.DisplayFor(model => model.PropertyName)</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.ClassName2Id)
+
+  @Html.LabelFor(model => model.PropertyName)
+  @Html.EditorFor(model => model.PropertyName)
+
+  @Html.LabelFor(model => model.PropertyName)
+  @Html.EditorFor(model => model.PropertyName)
+
+  @Html.LabelFor(model => model.PropertyName)
+  @Html.EditorFor(model => model.PropertyName)
+
+  @Html.LabelFor(model => model.ClassName1)
+  @Html.DropDownList("ClassName1Id")
+
+  <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
