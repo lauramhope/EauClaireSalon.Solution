@@ -1,0 +1,28 @@
+@{
+  Layout = "_Layout";
+}
+
+@model ProjectName.Models.ClassName2
+
+<h4>Add a new className2</h4>
+
+<p><strong>NOTE:</strong> You need to have at least one className1 before you can add a className2!</p>
+<p>Go to @Html.ActionLink("this page", "Create", "ClassNames1") to create a className1.</p>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.PropertyName)
+  @Html.TextBoxFor(model => model.PropertyName)
+
+  @Html.LabelFor(model => model.PropertyName)
+  @Html.TextBoxFor(model => model.PropertyName)
+
+  @Html.LabelFor(model => model.PropertyName)
+  @Html.TextBoxFor(model => model.PropertyName)
+
+  @Html.LabelFor(model => model.ClassName1)
+  @Html.DropDownList("ClassName1Id")
+
+  <input type="submit" value="Add new className2" class="btn btn-default" />
+}
+<p>@Html.ActionLink("Show all classNames2", "Index")</p>
