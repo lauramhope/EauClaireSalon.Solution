@@ -27,6 +27,7 @@ CREATE TABLE `clients` (
   `last_name` varchar(255) DEFAULT NULL,
   `birthday` datetime DEFAULT NULL,
   `StylistId` int(11) DEFAULT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ClientId`),
   KEY `StylistId_idx` (`StylistId`),
   CONSTRAINT `StylistId` FOREIGN KEY (`StylistId`) REFERENCES `stylists` (`StylistId`)
@@ -58,4 +59,4 @@ CREATE TABLE `stylists` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-19 10:49:01
+-- Dump completed on 2023-05-19 11:03:10

@@ -4,21 +4,21 @@
 
 @using HairSalon.Models;
 
-<h1>ClassNames2</h1>
+<h1>Clients</h1>
 
 @if (@Model.Count == 0)
 {
-  <h3>No classNames2 have been added yet!</h3>
+  <h3>No clients have been added yet!</h3>
 } 
 else
 {
   <ul>
-    @foreach (ClassName2 className2 in Model)
+    @foreach (Client client in Model)
     {
-      <li>@Html.ActionLink($"{className2.PropertyName}", "Details", new { id = className2.ClassName2Id }) | @className2.ClassName1.PropertyName</li>
+      <li>@Html.ActionLink($"{client.LastName}", "Details", new { id = client.ClientId }) | @client.Stylist.Name</li>
     }
   </ul>
 }
 
-<p>@Html.ActionLink("Add new className2", "Create")</p>
+<p>@Html.ActionLink("Add new client", "Create")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>

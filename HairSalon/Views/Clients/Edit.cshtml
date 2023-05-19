@@ -2,27 +2,27 @@
   Layout = "_Layout";
 }
 
-@model HairSalon.Models.ClassName2
+@model HairSalon.Models.Client
 
 <h2>Edit</h2>
 
-<h4>Edit this className2: @Html.DisplayFor(model => model.PropertyName)</h4>
+<h4>Edit this client: @Html.DisplayFor(model => model.LastName)</h4>
 
 @using (Html.BeginForm())
 {
-  @Html.HiddenFor(model => model.ClassName2Id)
+  @Html.HiddenFor(model => model.ClientId)
 
-  @Html.LabelFor(model => model.PropertyName)
-  @Html.EditorFor(model => model.PropertyName)
+  @Html.LabelFor(model => model.FirstName)
+  @Html.EditorFor(model => model.FirstName)
 
-  @Html.LabelFor(model => model.PropertyName)
-  @Html.EditorFor(model => model.PropertyName)
+  @Html.LabelFor(model => model.LastName)
+  @Html.EditorFor(model => model.LastName)
 
-  @Html.LabelFor(model => model.PropertyName)
-  @Html.EditorFor(model => model.PropertyName)
+  @Html.LabelFor(model => model.Birthday)
+  @Html.EditorFor(model => model.Birthday)
 
-  @Html.LabelFor(model => model.ClassName1)
-  @Html.DropDownList("ClassName1Id")
+  @Html.LabelFor(model => model.Stylist)
+  @Html.DropDownList("StylistId")
 
   <input type="submit" value="Save" />
 }

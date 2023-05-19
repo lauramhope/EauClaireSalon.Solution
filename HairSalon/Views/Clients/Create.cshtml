@@ -2,27 +2,28 @@
   Layout = "_Layout";
 }
 
-@model HairSalon.Models.ClassName2
+@model HairSalon.Models.Client
 
-<h4>Add a new className2</h4>
+<h4>Add a new client</h4>
 
-<p><strong>NOTE:</strong> You need to have at least one className1 before you can add a className2!</p>
-<p>Go to @Html.ActionLink("this page", "Create", "ClassNames1") to create a className1.</p>
+<p><strong>NOTE:</strong> You need to have at least one stylist before you can add a client!</p>
+<p>Go to @Html.ActionLink("this page", "Create", "Stylists") to create a stylist.</p>
 
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.PropertyName)
-  @Html.TextBoxFor(model => model.PropertyName)
 
-  @Html.LabelFor(model => model.PropertyName)
-  @Html.TextBoxFor(model => model.PropertyName)
+  @Html.LabelFor(model => model.FirstName)
+  @Html.TextBoxFor(model => model.FirstName)
 
-  @Html.LabelFor(model => model.PropertyName)
-  @Html.TextBoxFor(model => model.PropertyName)
+  @Html.LabelFor(model => model.LastName)
+  @Html.TextBoxFor(model => model.LastName)
 
-  @Html.LabelFor(model => model.ClassName1)
-  @Html.DropDownList("ClassName1Id")
+  @Html.LabelFor(model => model.Birthday)
+  @Html.TextBoxFor(model => model.Birthday)
 
-  <input type="submit" value="Add new className2" class="btn btn-default" />
+  @Html.LabelFor(model => model.Stylist)
+  @Html.DropDownList("StylistId")
+
+  <input type="submit" value="Add new client" class="btn btn-default" />
 }
-<p>@Html.ActionLink("Show all classNames2", "Index")</p>
+<p>@Html.ActionLink("Show all clients", "Index")</p>
