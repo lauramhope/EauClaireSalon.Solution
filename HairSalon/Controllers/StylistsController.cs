@@ -38,7 +38,7 @@ namespace HairSalon.Controllers
     {
       Stylist thisStylist = _db.Stylists
                                   .Include(stylist => stylist.Clients)
-                                  .FirstOrDefault(category => stylist.StylistId == id);
+                                  .FirstOrDefault(stylist => stylist.StylistId == id);
       return View(thisStylist);
     }
 
