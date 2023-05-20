@@ -21,11 +21,11 @@ _This application showcases using EFCore and MySQL to create and link database s
 ## Setup/Installation Requirements
 
 **Installing MySQL Workbench**
-1. Launch MySQL Workbench and click "Local Instance 3306" to reach navigator window_
-2. Select the "Administration" tab and click "Data Import/Restore"_
-3. Click "import from self-contained file" and select "..." to navigate to the file titled "laura_hope.sql" in the top level of this project_
-4. Under the drop down "Default Schema to be Imported to" select the button to the right labeled "New..." and enter a **schema name** of your choosing_
-5. Click "Start Import" in the bottom right of the window_
+1. Launch MySQL Workbench and click "Local Instance 3306" to reach navigator window
+2. Select the "Administration" tab and click "Data Import/Restore"
+3. Click "import from self-contained file" and select "..." to navigate to the file titled "laura_hope.sql" in the top level of this project
+4. Under the drop down "Default Schema to be Imported to" select the button to the right labeled "New..." and enter a **schema name** of your choosing
+5. Click "Start Import" in the bottom right of the window
 
 **Project Set-Up**
 * _Clone "EauClaireSalon".Solution“ from the repository to your desktop_
