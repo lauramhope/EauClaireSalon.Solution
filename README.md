@@ -20,14 +20,14 @@ _This application showcases using EFCore and MySQL to create and link database s
 
 ## Setup/Installation Requirements
 
-***Installing MySQL Workbench**
+**Installing MySQL Workbench**
 1. Launch MySQL Workbench and click "Local Instance 3306" to reach navigator window_
 2. Select the "Administration" tab and click "Data Import/Restore"_
 3. Click "import from self-contained file" and select "..." to navigate to the file titled "laura_hope.sql" in the top level of this project_
-4. Under the drop down "Default Schema to be Imported to" select the button to the right labeled "New..." and enter a ***schema name*** of your choosing_
+4. Under the drop down "Default Schema to be Imported to" select the button to the right labeled "New..." and enter a **schema name** of your choosing_
 5. Click "Start Import" in the bottom right of the window_
 
-***Project Set-Up***
+**Project Set-Up**
 * _Clone "EauClaireSalon".Solution“ from the repository to your desktop_
 * _Navigate to "EauClaireSalon.Solution" directory via your local terminal command line_
 * _Create a file ".gitignore" in the "EauClaireSalon.Solution" directory_
@@ -53,14 +53,14 @@ $ touch appsettings.json
   }
 }
 ```
-* _Remove the square brackets and replace ***USER-ID***, ***USER-PW***, and ***SCHEMA-DB-NAME*** with your own ID, password, and schema named use in MySQL Workbench step 4_
+* _Remove the square brackets and replace **USER-ID**, **USER-PW**, and **SCHEMA-DB-NAME** with your own ID, password, and schema named use in MySQL Workbench step 4_
 * _Navigate to the command line within the "HairSalon" folder and execute command "dotnet build"_
 * _Add the EF Core packages by typing the following into the command line:_
 ```
 $ dotnet add package Microsoft.EntityFrameworkCore -v 6.0.0
 $ dotnet add package Pomelo.EntityFrameworkCore.MySql -v 6.0.0
 ```
-* _Return to the command line and type "dotnet watch run" - this should automatically open a browser to the LocalHost:5000 or LocalHost:5001
+* _Return to the command line and type "dotnet watch run" - this should automatically open a browser to the LocalHost:5000 or LocalHost:5001_
 * _This is where you can interact with the application via entering stylists, clientele, etc._
 
 ## Known Bugs
