@@ -9,6 +9,7 @@
 * _C#_
 * _.NET v6.0_
 * _MySQLWorkbench_
+* _SQL Designer_
 * _MS EntityFrameworkCore v6.0.0_
 * _Pomelo EntityFrameworkCore MySQL v6.0.0_
 * _Git_
@@ -17,6 +18,11 @@
 ## Description
 
 _This application showcases using EFCore and MySQL to create and link database schemas to the project models. Application uses HTML helper methods, LINQ commands, and navigation properties to allow the salon owner to add stylists and link clients to each stylist using one-to-many relationships._
+
+## SQL Designer Database
+
+![Stylist/Client](stylistclientrelationship.png)
+
 
 ## Setup/Installation Requirements
 
